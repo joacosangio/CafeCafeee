@@ -5,16 +5,16 @@ const Navbar = () => {
         <div className = "logo-tittle">
             <h1>Coffe Codex</h1>
 
-            <img src = "" alt= "logo"/>
+            <img alt= "logo"/>
 
         </div>
         
 
         <nav className = "nav-links">
-            <a>Sucursales</a>
-            <a>Productos</a>
-            <a>Nosotros</a>
-            <a><i class="fa-solid fa-cart-shopping-fast"></i></a>
+            <a href = "../public/index.html">Sucursales</a>
+            <a href = "../public/index.html"> Productos</a>
+            <a href = "../public/index.html">Nosotros</a>
+            <a href = "../public/index.html"><i className="fa-solid fa-cart-shopping-fast"></i></a>
         </nav>
             
 
