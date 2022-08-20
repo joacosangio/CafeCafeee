@@ -1,5 +1,7 @@
-import './App.css';
-import Navbar from "./components/Header"
+import './components/Header/Header.scss';
+import "./components/CartWidget/CartWidget.scss"
+import Navbar from "./components/Header/Header";
+
 
 function App() {
   return (
