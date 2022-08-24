@@ -9,7 +9,10 @@ function App() {
   return (
     <div>
       <Navbar/>
-      <ItemListContainer/>
+      <ItemListContainer nombre="Cafe Colombiano" descripcion="El mejor café colombiano de la mas alta cálidad" precio="$1000"/>
+      <ItemListContainer nombre="Cafe Brasilero" descripcion="El mejor café Brasilero de la mas alta cálidad" precio="$2000"/>
+      <ItemListContainer nombre="Cafe Colombiano" descripcion="El mejor café colombiano de la mas alta cálidad" precio="$1000"/>
+      <ItemListContainer nombre="Cafe Colombiano" descripcion="El mejor café colombiano de la mas alta cálidad" precio="$1000"/>
     </div>
   );
 }

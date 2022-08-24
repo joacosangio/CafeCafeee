@@ -4,13 +4,17 @@ const Navbar = () => {
     return(
         <header className = "header-container">
 
-        <div className = "logo-tittle">
-            <h1>Coffe Codex</h1>
+        <div className="logo-container">
 
-            <img  alt= "logo"/>
+                <img className="logo"  alt= "logo"/>
 
         </div>
+
+        <div className="tittle-container">
         
+            <h1><strong>C</strong>offe <strong>C</strong>odex</h1>
+
+        </div>
 
         <nav className = "nav-links">
             <a href = "./public/index.html">Sucursales</a>
