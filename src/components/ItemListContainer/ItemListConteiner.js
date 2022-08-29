@@ -50,8 +50,8 @@ const stockProductos = [
     stock: 32,
 },
 
-console.log(stockProductos)
 ]
+console.log(stockProductos)
 
     const {id, nombre, descripcion, imagen, precio} = props
     console.log(id)
