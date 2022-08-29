@@ -49,6 +49,8 @@ const stockProductos = [
     precio: 1500,
     stock: 32,
 },
+
+console.log(stockProductos)
 ]
 
     const {id, nombre, descripcion, imagen, precio} = props
