@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contador-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    width: 90px;
+       
+    
+}
+
+.contador-tittle {
+    color: #fff;
+
+    font-family: 'Bebas Neue', cursive;
+}
+
+.btn-contador {
+    color: #fff;
+    background-color: #00563B;
+    border:1px solid #fff;
+    border-radius: 0.5em;
+
+    width: 2em;
+    height: 2em;
+
+    text-align: center;
+    font-family: 'Bebas Neue', cursive;
+    
+}
+
+.btn-contador:hover{
+    
+        transform: scale(1.5,1.5);
+        transition: all ease-in-out 0,5s
+}
+
+.contador-span {
+    color: #fff;
+    display: flex;
+    align-items: center;
+
+    text-align: center;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1rem;
+}
