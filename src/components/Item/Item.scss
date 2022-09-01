@@ -1,27 +1,3 @@
-.productos-container {
-    h2 {
-        text-align: center;
-    }
-}
-
-.productos {
-
-    display: flex;
-    flex-direction: row;
-    
-    
-    width:100% ; 
-    
-
-}
-
-.productos-tittle {
-    color: #fff;
-    font-size: 2rem;
-    font-family: 'Bebas Neue', cursive;
-}
-
-
 .producto {
     box-sizing: border-box;
     display: flex;
@@ -95,4 +71,3 @@
             font-size: 1.8rem;
         }
 }
-
