@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Walter+Turncoat&display=swap');
 
 body {
     margin: 0;
@@ -29,7 +30,7 @@ body {
   h1 {
     font-size: 3rem;
     color: #fff;
-    font-family:'Alumni Sans Pinstripe', sans-serif;
+    font-family: 'Walter Turncoat', cursive;
     letter-spacing: 0.3em;
     
   }
@@ -64,17 +65,22 @@ body {
 .tittle-container {
   display: flex;
   justify-content: space-between;
+  
 
-    img {
-      width: 130px;
-      height: 130px;
-      
+    strong {
+      color: #26180c;
     }
  }
 
 .tittle-container:hover {
+   h1{
+     color: #26180c; 
+     transition: all ease-in-out 0.2s;
+   } 
+
   strong {
-    color: #26180c;
+    color: #fff;
+    transition: all ease-in-out 0.2s;
   }
 }
 

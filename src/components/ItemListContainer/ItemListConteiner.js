@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { datos } from "../../auxiliares/datos";
+import { pedirDatos } from "../../auxiliares/pedirDatos";
 import { ItemList } from "../ItemList/ItemList";
 
 
@@ -8,7 +8,7 @@ const ItemListContainer = () => {
     const [productos, setProductos] = useState([])
 
     useEffect( () => {
-        datos()
+        pedirDatos()
             .then ( (respuesta) => {
                 setProductos(respuesta)
             })

@@ -1,5 +1,6 @@
 import CartWidget from "../CartWidget/CartWidget"
-import logon from '/Users/Joaquin/Desktop/Proyectos/Coffe/coffe-app/src/assets/logo.png'
+import logo from '/Users/Joaquin/Desktop/Proyectos/Coffe/coffe-app/src/assets/logo.png'
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
     return(
@@ -7,20 +8,21 @@ const Navbar = () => {
 
         <div className="logo-container">
 
-            <img src={logon} className="logo"  alt= ""/>
+            <img src={logo} className="logo"  alt= ""/>
 
         </div>
 
         <div className="tittle-container">
         
-            <h1><strong>C</strong>offe <strong>C</strong>odex</h1>
+            <h1><strong>C</strong>offee <strong>C</strong>odex</h1>
 
         </div>
 
         <nav className = "nav-links">
-            <a href = "./public/index.html">Sucursales</a>
-            <a href = "./public/index.html"> Productos</a>
-            <a href = "./public/index.html">Nosotros</a>
+            <Link to = "/">Inicio</Link>
+            <Link to = "./Cafeteras">Cafeteras</Link>
+            <Link to = "./Cafes">Cafés</Link>
+            <Link to = "./Merchandising">Merchandising</Link>
             <CartWidget/>
         </nav>
             

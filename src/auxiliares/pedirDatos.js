@@ -1,6 +1,6 @@
 import { stockProductos } from "../data/stockProductos"
 
-export const datos = () => {
+export const pedirDatos = () => {
     return new Promise ((resolve, reject) => {
         setTimeout(() => {
             resolve (stockProductos)
