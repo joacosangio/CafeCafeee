@@ -13,19 +13,25 @@ body {
   justify-content: space-between;
   align-items: center;
   text-align: center;
+  height: 110px;
+  padding: 0px 1em 0px 0px;
     
     
   background-color: #00563B;
   color: #fff;
-  box-shadow: 0px 0px 15px #fff;
+  box-shadow: 0px 0px 20px #000;
+  border-bottom: 3px solid #000;
+  position: sticky;
+
   }
   
 .header-container{
   h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     color: #fff;
     font-family:'Alumni Sans Pinstripe', sans-serif;
     letter-spacing: 0.3em;
+    
   }
 }
     
@@ -56,11 +62,29 @@ body {
 }
 
 .tittle-container {
-  margin-left: 20%;
+  display: flex;
+  justify-content: space-between;
+
+    img {
+      width: 130px;
+      height: 130px;
+      
+    }
  }
 
 .tittle-container:hover {
   strong {
     color: #26180c;
+  }
+}
+
+.logo-container {
+display: flex;
+justify-content: center;
+align-items: center;
+
+  img{
+    width: 120px;
+    
   }
 }

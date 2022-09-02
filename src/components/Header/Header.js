@@ -1,4 +1,5 @@
 import CartWidget from "../CartWidget/CartWidget"
+import logon from '/Users/Joaquin/Desktop/Proyectos/Coffe/coffe-app/src/assets/logo.png'
 
 const Navbar = () => {
     return(
@@ -6,7 +7,7 @@ const Navbar = () => {
 
         <div className="logo-container">
 
-                <img className="logo"  alt= "logo"/>
+            <img src={logon} className="logo"  alt= ""/>
 
         </div>
 
