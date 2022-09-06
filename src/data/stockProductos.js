@@ -7,7 +7,7 @@ export const stockProductos = [
         precio: 1500,
         stock: 32,
         alt: "Alt del producto",
-        categoria: "Café"
+        categoria: "Cafes"
     },
     {
         id: 2,
@@ -17,7 +17,7 @@ export const stockProductos = [
         precio: 2500,
         stock: 12,
         alt: "Alt del producto",
-        categoria: "Café"
+        categoria: "Cafes"
     },
     {
         id: 3,
@@ -27,7 +27,7 @@ export const stockProductos = [
         precio: 75000,
         stock: 22,
         alt: "Alt del producto",
-        categoria: "Cafetera"
+        categoria: "Cafeteras"
     },
     {
         id: 4,
@@ -37,7 +37,7 @@ export const stockProductos = [
         precio: 20000,
         stock: 34,
         alt: "Alt del producto",
-        categoria: "Cafetera"
+        categoria: "Cafeteras"
     },
     {
         id: 5,

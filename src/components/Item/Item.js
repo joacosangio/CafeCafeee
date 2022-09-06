@@ -1,4 +1,5 @@
 import { Icon } from '@iconify/react';
+import { Link } from 'react-router-dom';
 
 export const Item = ({producto}) => {
     if (producto.stock !== 0) {
@@ -9,7 +10,7 @@ export const Item = ({producto}) => {
                         <p>{producto.descripcion}</p>
                         <div className="precio-info">
                         <span>${producto.precio} c/u</span>
-                        <Icon icon="ant-design:info-circle-filled" />
+                        <Link to={`/item/${producto.id}`}><Icon icon="ant-design:info-circle-filled" /></Link>
                         </div>
                     </div>
         )
