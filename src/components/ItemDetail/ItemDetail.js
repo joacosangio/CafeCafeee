@@ -1,20 +1,28 @@
 import Contador from "../Contador/Contador"
 
-
-
-
-const ItemDetail = ( {prod} ) => {
+const ItemDetail = ( {item} ) => {
     return (
 
         <div className="detail-container">
 
-            <h4>{prod.nombre}</h4>
-            <img src={prod.img} alt="123" />
-            <p>{prod.desc}</p>
-            <span>{prod.precio}</span>
-            <span>{prod.stock}</span>
+          
+         <div className="img">
+
+            <img src={item.img} alt={item.alt} />
+
+        </div>
+
+            <div className="details">
+            <h4>{item.nombre}</h4>
+            <p>{item.detailDesc}</p>
+            <hr/>
+            <span className="price">${item.precio} c/u</span>
             <Contador />
-            <button>Agregar al carrito</button>
+            <span className="stock">Stock disponible: {item.stock}</span>
+            <hr/>
+            <button className="btn-agregar-carrito">Agregar al carrito</button>
+
+            </div>
 
 
         </div>

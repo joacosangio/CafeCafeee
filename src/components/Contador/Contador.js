@@ -2,12 +2,12 @@ import { useState } from "react";
 
 
 
-const Contador = () => {
+const Contador = (prod) => {
 
     const [contador, setContador] = useState (1)
 
     const handleSumar = () => {
-        if (contador < 10) {
+        if (contador < prod.stock) {
 
             setContador(contador + 1)
         }
@@ -24,9 +24,6 @@ const Contador = () => {
     // Los valores de la funcion sumar luego van a ir determinados segun el stock del producto
 
     return ( 
-        <div className ="container">
-
-            <h1 className ="contador-tittle">Contador</h1>
 
         <div className="contador-container">
 
@@ -38,7 +35,7 @@ const Contador = () => {
             
         </div>
 
-        </div>
+        
     )
 }
 

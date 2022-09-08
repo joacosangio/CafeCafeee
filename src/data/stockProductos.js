@@ -4,9 +4,10 @@ export const stockProductos = [
         nombre: "Café Colombiano",
         img: "https://via.placeholder.com/150",
         descripcion: "El mejor café colombiano en grano y de la mas alta calidad",
+        detailDesc: "Su excelsa calidad y suavidad ha llegado a convertirse en un símbolo, traspasando todas las fronteras. Auténticos granos de café colombiano, 100% arábigo, único café con el aval de la Federación Nacional de Cafeteros de Colombia.",
         precio: 1500,
         stock: 32,
-        alt: "Alt del producto",
+        alt: "Cafe colombiano en grano",
         categoria: "Cafes"
     },
     {
@@ -14,9 +15,10 @@ export const stockProductos = [
         nombre: "Café Brasilero",
         img: "https://via.placeholder.com/150",
         descripcion: "El mejor café brasilero en grano y de la mas alta calidad",
+        detailDesc: "",
         precio: 2500,
         stock: 12,
-        alt: "Alt del producto",
+        alt: "Café brasilero en grano",
         categoria: "Cafes"
     },
     {
@@ -24,9 +26,10 @@ export const stockProductos = [
         nombre: "Cafetera Oster",
         img: "https://via.placeholder.com/150",
         descripcion: "En pocos minutos y siguiendo simples pasos tu café va a estar listo con resultados profesionales. Programá tu cafetera y empezá a disfrutar de su aroma e intenso sabor.",
+        detailDesc: "",
         precio: 75000,
         stock: 22,
-        alt: "Alt del producto",
+        alt: "Cafetera Oster",
         categoria: "Cafeteras"
     },
     {
@@ -34,9 +37,10 @@ export const stockProductos = [
         nombre: "Cafetera Nespresso",
         img: "https://via.placeholder.com/150",
         descripcion: "Arrancar cada mañana de una forma diferente es posible. Con las cápsulas podés elegir entre una amplia gama de variedades de café y otras bebidas, como chocolate caliente.",
+        detailDesc: "",
         precio: 20000,
         stock: 34,
-        alt: "Alt del producto",
+        alt: "Cafetera Nespresso",
         categoria: "Cafeteras"
     },
     {
@@ -44,9 +48,10 @@ export const stockProductos = [
         nombre: "Capsulas Starbucks",
         img: "https://via.placeholder.com/150",
         descripcion: "Capsulas sabor: Capuccino, Caramel, Vainilla o Americano",
+        detailDesc: "",
         precio: 1500,
         stock: 20,
-        alt: "Alt del producto",
+        alt: "Capsulas Starbucks",
         categoria: "Capsulas"
     },
     {
@@ -54,9 +59,10 @@ export const stockProductos = [
         nombre: "Capsulas Nespresso",
         img: "https://via.placeholder.com/150",
         descripcion: "Capsulas sabor: Cosi, Volluto, Capriccio, Livanto, Roma, Arpeggio o Ristretto.",
+        detailDesc: "",
         precio: 1500,
         stock: 20,
-        alt: "Alt del producto",
+        alt: "Capsulas Nespresso",
         categoria: "Capsulas"
     },
     

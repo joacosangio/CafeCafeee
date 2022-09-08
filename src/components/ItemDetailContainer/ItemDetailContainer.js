@@ -3,10 +3,12 @@ import { useParams } from "react-router-dom";
 import { pedirDatos } from "../../auxiliares/pedirDatos";
 import ItemDetail from "../ItemDetail/ItemDetail";
 
+
+
 const ItemDetailContainer = () => {
 
 
-    const [item, setItem] = useState(null)
+    const [item, setItem] = useState({})
     const {itemId} = useParams()
 
 
@@ -15,7 +17,7 @@ const ItemDetailContainer = () => {
             .then( (respuesta) => {
                 setItem ( respuesta.find( (prod) => prod.id === Number (itemId)  ) )
             } )
-    })
+    },[itemId])
 
     return (
 
