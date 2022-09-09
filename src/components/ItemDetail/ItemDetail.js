@@ -16,9 +16,11 @@ const ItemDetail = ( {item} ) => {
             <h4>{item.nombre}</h4>
             <p>{item.detailDesc}</p>
             <hr/>
-            <span className="price">${item.precio} c/u</span>
-            <Contador />
-            <span className="stock">Stock disponible: {item.stock}</span>
+            <div>
+                <span className="price">${item.precio} c/u</span>
+                <Contador />
+                <span className="stock">Stock disponible: {item.stock}</span>
+            </div>
             <hr/>
             <button className="btn-agregar-carrito">Agregar al carrito</button>
 
