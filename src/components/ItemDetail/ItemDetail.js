@@ -18,7 +18,7 @@ const ItemDetail = ( {item} ) => {
             <hr/>
             <div>
                 <span className="price">${item.precio} c/u</span>
-                <Contador />
+                <Contador prod = {item}/>
                 <span className="stock">Stock disponible: {item.stock}</span>
             </div>
             <hr/>

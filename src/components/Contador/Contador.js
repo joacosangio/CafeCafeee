@@ -2,7 +2,7 @@ import { useState } from "react";
 
 
 
-const Contador = (prod) => {
+const Contador = ({prod}) => {
 
     const [contador, setContador] = useState (1)
 

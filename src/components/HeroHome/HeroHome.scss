@@ -3,7 +3,7 @@
 
 .hero-inicio {
     width: 100%;
-    height: 50vw;
+    height: 40vw;
     margin-top: 1em;
     background-image: linear-gradient(
         0deg,
@@ -17,6 +17,9 @@
     display: flex;
     justify-content: start;
     align-items: flex-start;
+    border-bottom-right-radius: 35% ;
+    border-bottom-left-radius: 25%;
+    border-top-right-radius: 15%;
 
         
 }
