@@ -1,3 +1,4 @@
+import "./App.scss"
 import './components/Header/Header.scss';
 import "./components/CartWidget/CartWidget.scss";
 import "./components/Contador/Contador.scss";
@@ -8,6 +9,7 @@ import Navbar from "./components/Header/Header";
 import ItemListContainer from './components/ItemListContainer/ItemListConteiner';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Footer from './components/Footer/Footer';
 
 
 function App() {
@@ -26,6 +28,8 @@ function App() {
           <Route path='*' element= {<ItemListContainer/>}/>
 
         </Routes>
+
+      <Footer/>
         
     </BrowserRouter>
 
