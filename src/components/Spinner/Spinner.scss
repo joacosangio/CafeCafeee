@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 .spinner-container {
 
     background-color: #26180C;
@@ -9,11 +11,13 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin: 0;
 
 }
 
 .spinner-contenido {
     font-size: 3rem;
+    font-family: 'Bebas Neue', cursive;
     color: #fff;
 }
 
