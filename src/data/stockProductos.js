@@ -24,7 +24,7 @@ export const stockProductos = [
     {
         id: 3,
         nombre: "Cafetera Oster",
-        img: "https://via.placeholder.com/150",
+        img:"https://via.placeholder.com/150" ,
         descripcion: "Cafetera Oster original e importada",
         detailDesc: "La experiencia de un café intenso y auténtico que ofrece la cafetera Oster® PrimaLatte® ahora se maximiza aún más en su segunda generación BVSTEM6601 con un desempeño superior y calidad profesional. Prepara en casa combinaciones de café y leche capaces de competir con las recetas de los mejores baristas.",
         precio: 75000,

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { pedirDatos } from "../../auxiliares/pedirDatos";
 import ItemDetail from "../ItemDetail/ItemDetail";
+import Spinner from "../Spinner/Spinner";
 
 
 
@@ -10,6 +11,7 @@ const ItemDetailContainer = () => {
 
     const [item, setItem] = useState({})
     const {itemId} = useParams()
+    const [spinner, setSpinner] = useState(true)
 
 
     useEffect (() => {
@@ -17,15 +19,30 @@ const ItemDetailContainer = () => {
             .then( (respuesta) => {
                 setItem ( respuesta.find( (prod) => prod.id === Number (itemId)  ) )
             } )
+            .finally(() => {
+                setSpinner(false)
+            })
     },[itemId])
 
     return (
 
-        <div>
+        <>{
+            
+            spinner
 
-            <ItemDetail item= {item}/>
+            ?<Spinner/>
 
-        </div>
+            :
+
+            <div>
+
+                <ItemDetail item= {item}/>
+
+            </div>
+
+        }
+        </>
+
 
     )
 
