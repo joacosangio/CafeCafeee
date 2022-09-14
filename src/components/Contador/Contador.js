@@ -1,13 +1,13 @@
-import { useState } from "react";
 
 
 
-const Contador = ({prod}) => {
 
-    const [contador, setContador] = useState (1)
+const Contador = ({limite, contador, setContador, handleAgregar}) => {
+
+    
 
     const handleSumar = () => {
-        if (contador < prod.stock) {
+        if (contador < limite) {
 
             setContador(contador + 1)
         }
@@ -27,11 +27,19 @@ const Contador = ({prod}) => {
 
         <div className="contador-container">
 
-            <button onClick={handleRestar} className ="btn-contador">-</button>
+            <div className="contador-btn" >
 
-                <span className ="contador-span">{contador}</span>
+                <button onClick={handleRestar} className ="btn-contador">-</button>
 
-            <button onClick={handleSumar} className ="btn-contador">+</button>
+                    <span className ="contador-span">{contador}</span>
+
+                <button onClick={handleSumar} className ="btn-contador">+</button>
+                
+            </div>
+            
+            <button onClick={handleAgregar} className="btn-agregar-carrito">Agregar al carrito</button>
+            
+
             
         </div>
 
