@@ -12,17 +12,31 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Footer from './components/Footer/Footer';
 import CartContext from "./context/CartContext";
 import { useState } from "react";
+import Cart from "./components/Cart/Cart";
 
 
 function App() {
 
   const [cart, setCart] = useState([])
 
+  const agregarAlCarrito = (item) => {
+
+    setCart([...cart, item])
+
+  }
+
+  const isInCart = (id) => {
+
+    return cart.some ((item) => item.id === id)
+
+  }
+
   return (
 
     <CartContext.Provider value={ {
       cart,
-      setCart,
+      agregarAlCarrito,
+      isInCart
     }}
       
     >
@@ -36,6 +50,7 @@ function App() {
             <Route path='/' element={ <ItemListContainer/> } />
             <Route path='/productos/:categoria' element= {<ItemListContainer/>}/>
             <Route path='/item/:itemId' element= {<ItemDetailContainer/>}/>
+            <Route path="/cart" element={<Cart/>}/>
             <Route path='*' element= {<ItemListContainer/>}/>
 
           </Routes>

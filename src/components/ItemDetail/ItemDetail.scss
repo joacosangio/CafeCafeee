@@ -81,3 +81,24 @@
 .stock {
     font-size: 1.5rem;
 }
+
+.btn-comprar {
+    color: #fff;
+    background-color: #00563B;
+    border:1px solid #fff;
+    border-radius: 0.5em;
+    width: 150px;
+    height: 30px;
+    align-self: center;
+    
+    text-align: center;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1rem;
+
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.2 , 1.2);
+            transition: all ease-in-out;
+            color: #26180C;
+        }
+}
