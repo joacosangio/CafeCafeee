@@ -6,7 +6,7 @@ import Contador from "../Contador/Contador"
 const ItemDetail = ( {item} ) => {
 
     const [cantidad, setCantidad] = useState(1)
-    const {agregarAlCarrito, } = useContext(CartContext)
+    const {agregarAlCarrito, isInCart} = useContext(CartContext)
 
     const handleAgregar = () => {
 
@@ -38,18 +38,22 @@ const ItemDetail = ( {item} ) => {
             <div className="details">
             <h4>{item.nombre}</h4>
             <p>{item.detailDesc}</p>
+            <span className="stock">Stock disponible: {item.stock}</span>
             <hr/>
-            <div>
-                <span className="price">${item.precio} c/u</span>
-                <Contador   limite = {item.stock}
-                            contador = {cantidad}   
-                            setContador = {setCantidad}
-                            handleAgregar = { handleAgregar}                     
-                />
-                <span className="stock">Stock disponible: {item.stock}</span>
-            </div>
-            <hr/>
-            <Link to={"/cart"}><button className="btn-comprar">Ir a comprar</button></Link>
+
+            <span className="price">${item.precio} c/u</span>
+            {
+                isInCart(item.id)
+                ? <Link to={"/cart"}><button className="btn-comprar">Ir a comprar</button></Link>
+                :<div>
+                    <Contador   limite = { item.stock }
+                                contador = { cantidad }   
+                                setContador = { setCantidad }
+                                handleAgregar = { handleAgregar }                     
+                    />
+                </div>
+            }
+            
             </div>
 
 

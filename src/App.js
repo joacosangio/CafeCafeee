@@ -31,12 +31,17 @@ function App() {
 
   }
 
+  const cartCantidad = () => {
+    return cart.reduce((acumulador, item) => acumulador + item.cantidad, 0)
+  }
+
   return (
 
     <CartContext.Provider value={ {
       cart,
       agregarAlCarrito,
-      isInCart
+      isInCart,
+      cartCantidad
     }}
       
     >

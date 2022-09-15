@@ -5,3 +5,14 @@
 .cart-icon:hover {
     color: #2c180a;
 }
+
+.cart-widg-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+        span {
+            font-size: 1.7rem;
+            
+        }
+}
