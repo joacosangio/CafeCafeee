@@ -1,15 +1,24 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import CartContext from "../../context/CartContext";
 import Contador from "../Contador/Contador"
 
 const ItemDetail = ( {item} ) => {
 
     const [cantidad, setCantidad] = useState(1)
+    const {cart, setCart} = useContext(CartContext)
+    console.log(cart)
 
     const handleAgregar = () => {
-        console.log({
-            ...item,
-            cantidad
-        })
+        const itemEnCarrito = {
+
+            id : item.id,
+            nombre : item.nombre,
+            cantidad,
+            precio: item.precio * cantidad,
+            desc: item.descripcion,
+        }
+
+        setCart ([...cart, itemEnCarrito])
     }
 
     return (

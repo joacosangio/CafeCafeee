@@ -10,29 +10,41 @@ import ItemListContainer from './components/ItemListContainer/ItemListConteiner'
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Footer from './components/Footer/Footer';
+import CartContext from "./context/CartContext";
+import { useState } from "react";
 
 
 function App() {
+
+  const [cart, setCart] = useState([])
+
   return (
-   
-    <BrowserRouter>
 
-      <Navbar/>
+    <CartContext.Provider value={ {
+      cart,
+      setCart,
+    }}
       
-        <Routes>
+    >
 
+      <BrowserRouter>
 
-          <Route path='/' element={ <ItemListContainer/> } />
-          <Route path='/productos/:categoria' element= {<ItemListContainer/>}/>
-          <Route path='/item/:itemId' element= {<ItemDetailContainer/>}/>
-          <Route path='*' element= {<ItemListContainer/>}/>
-
-        </Routes>
-
-      <Footer/>
+        <Navbar/>
         
-    </BrowserRouter>
+          <Routes>
 
+            <Route path='/' element={ <ItemListContainer/> } />
+            <Route path='/productos/:categoria' element= {<ItemListContainer/>}/>
+            <Route path='/item/:itemId' element= {<ItemDetailContainer/>}/>
+            <Route path='*' element= {<ItemListContainer/>}/>
+
+          </Routes>
+
+        <Footer/>
+          
+      </BrowserRouter>
+
+    </CartContext.Provider>
   );
 }
 

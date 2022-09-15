@@ -44,7 +44,7 @@ const Contador = ({limite, contador, setContador, handleAgregar}) => {
         </div>
 
         
-    )
+    )  
 }
 
 export default Contador ;
