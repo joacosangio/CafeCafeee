@@ -17,11 +17,14 @@ body {
   text-align: center;
   height: 10vh;
   padding: 0px 1em 0px 0px;
+  
     
     
   background-color: #00563B;
   color: #fff;
   border-radius: 100% 0% 83% 17% / 0% 52% 48% 100%   ;
+
+  
 
   }
   
@@ -94,3 +97,23 @@ align-items: center;
     
   }
 }
+
+@keyframes infiniteloop {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+}
+
+.logo {
+  animation: infiniteloop 7s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  
+
+
+}
+
