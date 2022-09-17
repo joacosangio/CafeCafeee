@@ -10,41 +10,17 @@ import ItemListContainer from './components/ItemListContainer/ItemListConteiner'
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Footer from './components/Footer/Footer';
-import CartContext from "./context/CartContext";
-import { useState } from "react";
+import { CartProvider } from "./context/CartContext";
 import Cart from "./components/Cart/Cart";
 
 
 function App() {
 
-  const [cart, setCart] = useState([])
-
-  const agregarAlCarrito = (item) => {
-
-    setCart([...cart, item])
-
-  }
-
-  const isInCart = (id) => {
-
-    return cart.some ((item) => item.id === id)
-
-  }
-
-  const cartCantidad = () => {
-    return cart.reduce((acumulador, item) => acumulador + item.cantidad, 0)
-  }
 
   return (
 
-    <CartContext.Provider value={ {
-      cart,
-      agregarAlCarrito,
-      isInCart,
-      cartCantidad
-    }}
-      
-    >
+    
+    <CartProvider>
 
       <BrowserRouter>
 
@@ -64,7 +40,7 @@ function App() {
           
       </BrowserRouter>
 
-    </CartContext.Provider>
+    </CartProvider>
   );
 }
 

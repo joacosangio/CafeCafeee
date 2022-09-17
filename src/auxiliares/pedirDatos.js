@@ -5,6 +5,6 @@ export const pedirDatos = () => {
         setTimeout(() => {
             resolve (stockProductos)
             reject ("Upss... Algo salio mal")
-        },2000)
+        },1500)
     })
  }
