@@ -28,6 +28,8 @@ const ItemDetail = ( {item} ) => {
 
         <div className="detail-container">
 
+        
+
           
          <div className="img">
 
@@ -44,7 +46,12 @@ const ItemDetail = ( {item} ) => {
             <span className="price">${item.precio} c/u</span>
             {
                 isInCart(item.id)
-                ? <Link to={"/cart"}><button className="btn-comprar">Ir a comprar</button></Link>
+                ? <>
+                    <Link to={"/cart"}><button className="btn-comprar">Terminar compra</button></Link>
+                    <Link to = {"/"}><button className="btn-comprar">Volver</button></Link>
+                </>
+                
+                
                 :<div>
                     <Contador   limite = { item.stock }
                                 contador = { cantidad }   
@@ -53,6 +60,8 @@ const ItemDetail = ( {item} ) => {
                     />
                 </div>
             }
+
+        
             
             </div>
 

@@ -1,4 +1,5 @@
 import "../Spinner/Spinner.scss"
+import  logo from '../../assets/logos/logo.png'
 
 
 
@@ -9,9 +10,7 @@ const Spinner = () => {
         <div className="spinner-container">
 
             <div className="spinner-contenido">
-            
-                <p>Cargando...</p>
-    
+                <img src={logo} className="logo"  alt= ""/>
             </div>
 
         </div>
