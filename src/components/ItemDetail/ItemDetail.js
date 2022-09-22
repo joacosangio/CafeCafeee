@@ -38,12 +38,12 @@ const ItemDetail = ( {item} ) => {
         </div>
 
             <div className="details">
-            <h4>{item.nombre}</h4>
-            <p>{item.detailDesc}</p>
-            <span className="stock">Stock disponible: {item.stock}</span>
-            <hr/>
+                <h4>{item.nombre}</h4>
+                <p>{item.detailDesc}</p>
+                <span className="stock">Stock disponible: {item.stock}</span>
+                <hr/>
 
-            <span className="price">${item.precio} c/u</span>
+                <span className="price">${item.precio} c/u</span>
             {
                 isInCart(item.id)
                 ? <>
