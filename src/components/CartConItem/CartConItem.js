@@ -35,7 +35,8 @@ const CartConItem = () => {
 
                         <span>Precio total: ${precioTotal()}</span>
                         <button onClick={vaciarCarrito} className="btn-vaciar">Vaciar carrito</button>
-                        <Link to={"/"}><button className="btn-seguir-comprando">Seguir comprando</button></Link>   
+                        <Link to={"/"}><button className="btn-seguir-comprando">Seguir comprando</button></Link>
+                        <Link to={"/"}><button className="btn-seguir-comprando">Ir a pagar</button></Link>      
 
                     </div>
                                     
