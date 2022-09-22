@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { pedirDatos } from "../../auxiliares/pedirDatos";
 import HeroHome from "../HeroHome/HeroHome";
 import { ItemList } from "../ItemList/ItemList";
 import Spinner from "../Spinner/Spinner";
-import { collection } from "firebase/firestore";
+import { collection, getDocs, query, where } from "firebase/firestore";
 import { base } from "../../firebase/firebaseConfig";
 
 
@@ -15,21 +14,21 @@ const ItemListContainer = () => {
     const [spinner, setSpinner] = useState(true)
 
     useEffect( () => {
-        pedirDatos()
-            .then ( (respuesta) => {
-                if (!categoria) {
-                    setProductos(respuesta)
-                }else {
-                    setProductos ( respuesta.filter( (prod) => prod.categoria === categoria))
-                }
-            })
-            .catch( (error) => {
-                console.log(error)
+        setSpinner(true)
+
+        const productosRef = collection(base, "productos")
+
+        const filtrado = categoria ? query(productosRef, where("categoria", "==", categoria)) : productosRef
+
+        getDocs(filtrado)
+            .then((resp) => {
+               const productosBase = resp.docs.map( (doc) => ({id: doc.id , ...doc.data()}) )
+               setProductos(productosBase)
             })
             .finally(() => {
                 setSpinner(false)
             })
-
+           
     }, [categoria])
 
     

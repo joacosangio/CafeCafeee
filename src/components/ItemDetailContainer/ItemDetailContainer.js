@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { pedirDatos } from "../../auxiliares/pedirDatos";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import Spinner from "../Spinner/Spinner";
+import { doc, getDoc } from "firebase/firestore";
+import { base } from "../../firebase/firebaseConfig";
 
 
 
@@ -15,14 +16,18 @@ const ItemDetailContainer = () => {
 
 
     useEffect (() => {
-        pedirDatos()
-            .then( (respuesta) => {
-                setItem ( respuesta.find( (prod) => prod.id === Number (itemId)  ) )
-            } )
-            .finally(() => {
-                setSpinner(false)
-            })
-    },[itemId])
+
+        const docRef = doc(base, "productos", itemId)
+
+        getDoc(docRef)
+        .then((doc) => {
+            setItem({id: doc.id, ...doc.data()})
+        })
+        .finally(() =>{
+            setSpinner(false)
+        })
+        
+    },[])
 
     return (
 

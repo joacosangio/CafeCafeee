@@ -1,7 +1,8 @@
 import { Icon } from "@iconify/react";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import CartContext from "../../context/CartContext";
 import "../CartItem/CartItem.scss"
+import Contador from "../Contador/Contador";
 
 
 

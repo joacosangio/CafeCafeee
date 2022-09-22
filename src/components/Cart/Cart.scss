@@ -88,3 +88,12 @@
     justify-content: center;
     align-content: center;
 }
+
+.cart-vacio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+}

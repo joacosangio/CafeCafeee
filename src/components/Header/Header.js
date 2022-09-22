@@ -1,6 +1,6 @@
 import CartWidget from "../CartWidget/CartWidget"
 import { Link } from "react-router-dom";
-import Logo from "../Logo/Logo";
+import LogoQuieto from "../../assets/logos/logo.png";
 
 const Navbar = () => {
     return(
@@ -8,7 +8,7 @@ const Navbar = () => {
 
         <div className="logo-container">
 
-            <Logo/>
+            <img src={LogoQuieto} className="logo-quieto"/>
 
         </div>
 

@@ -5,13 +5,27 @@ import CartContext from '../../context/CartContext';
 
 const CartWidget = () => {
 
-    const {cartCantidad} = useContext(CartContext)
+    const {cartCantidad, cart} = useContext(CartContext)
 
     return (
-        <div className='cart-widg-container'>
-            <Link to={"/cart"}><Icon className='cart-icon' icon="akar-icons:cart" /></Link>
-            <span>{cartCantidad()}</span>
-        </div>
+
+
+            cart.length === 0
+            ?
+            
+            <div className='cart-widg-container'>
+
+                <Link to={"/cart"}><Icon className='cart-icon' icon="akar-icons:cart" /></Link>
+
+            </div>
+            :
+
+            <div className='cart-widg-container'>
+                <Link to={"/cart"}><Icon className='cart-icon' icon="akar-icons:cart" /></Link>
+                <span>{cartCantidad()}</span>
+            </div>
+        
+        
     )
 }
 

@@ -8,6 +8,7 @@ const Logo = () => {
 
     return (
 
+        
         <img src={logo} className="logo"  alt= ""/>
         
     )
