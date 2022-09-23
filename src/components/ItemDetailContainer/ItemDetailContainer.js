@@ -27,7 +27,7 @@ const ItemDetailContainer = () => {
             setSpinner(false)
         })
         
-    },[])
+    },[itemId])
 
     return (
 
