@@ -12,6 +12,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Footer from './components/Footer/Footer';
 import { CartProvider } from "./context/CartContext";
 import Cart from "./components/Cart/Cart";
+import CheckoutForm from "./components/CheckoutForm/CheckoutForm";
+import HeroHome from "./components/HeroHome/HeroHome";
 
 
 function App() {
@@ -28,10 +30,11 @@ function App() {
         
           <Routes>
 
-            <Route path='/' element={ <ItemListContainer/> } />
+            <Route path='/' element={<><ItemListContainer/> <HeroHome/> </>} />
             <Route path='/productos/:categoria' element= {<ItemListContainer/>}/>
             <Route path='/item/:itemId' element= {<ItemDetailContainer/>}/>
             <Route path="/cart" element={<Cart/>}/>
+            <Route path="/checkoutForm" element={<CheckoutForm/>}/>
             <Route path='*' element= {<ItemListContainer/>}/>
 
           </Routes>

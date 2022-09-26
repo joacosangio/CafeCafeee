@@ -1,5 +1,7 @@
 import { createContext } from "react";
 import { useState } from "react";
+import Swal from 'sweetalert2';
+import ItemDetailContainer from "../components/ItemDetailContainer/ItemDetailContainer";
 
 
 
@@ -15,7 +17,28 @@ export const CartProvider = ({children}) => {
 
     const agregarAlCarrito = (item) => {
 
-        setCart([...cart, item])
+        Swal.fire({
+            title: "Producto agregado correctamente!",
+            icon: "success",
+            iconColor: "#fff",
+            color:"#fff",
+            confirmButtonColor: '#26180C',
+            confirmButtonText: 'Perfecto!',
+            cancelButtonColor: '#26180C',
+            cancelButtonText: "Deshacer",
+            background: "#00563B",
+            showCancelButton: true,
+
+        }).then((result) => {
+            if(result.isConfirmed) {
+
+                setCart([...cart, item])
+            }
+            else{
+                <ItemDetailContainer/>
+            }
+        })
+
 
     }
 
@@ -38,9 +61,31 @@ export const CartProvider = ({children}) => {
     }
 
     const vaciarCarrito = () => {
+        Swal.fire({
+            title: '¿Seguro quieres vaciar el carrito?',
+            text: "Si vacias el carrito, no quedará nada adentro =(",
+            icon: 'warning',
+            color:"#fff",
+            iconColor:"#fff",
+            background:"#00563B",
+            showCancelButton: true,
+            confirmButtonColor: '#26180C',
+            cancelButtonColor: '#26180C',
+            confirmButtonText: 'Si, vaciar',
+            cancelButtonText: "No, cancelar"
+          }).then((result) => {
+            if(result.isConfirmed) {
+                setCart([])
+            }
+            else{
+                setCart([...cart])
+            }
+          })
 
+    }
+
+    const vaciarCarritoSinSwal = () => {
         setCart([])
-
     }
 
     const eliminarItem = (id) => {
@@ -61,7 +106,8 @@ export const CartProvider = ({children}) => {
             cartCantidad,
             precioTotal,
             vaciarCarrito,
-            eliminarItem
+            eliminarItem,
+            vaciarCarritoSinSwal
           }}>
 
             {children}

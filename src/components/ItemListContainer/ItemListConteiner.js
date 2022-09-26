@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import HeroHome from "../HeroHome/HeroHome";
 import { ItemList } from "../ItemList/ItemList";
 import Spinner from "../Spinner/Spinner";
 import { collection, getDocs, query, where } from "firebase/firestore";
@@ -24,6 +23,7 @@ const ItemListContainer = () => {
             .then((resp) => {
                const productosBase = resp.docs.map( (doc) => ({id: doc.id , ...doc.data()}) )
                setProductos(productosBase)
+               
             })
             .finally(() => {
                 setSpinner(false)
@@ -43,8 +43,6 @@ const ItemListContainer = () => {
         :<div>
 
             <ItemList productos={productos}/>
-
-            <HeroHome/>
         
          </div>
         }
