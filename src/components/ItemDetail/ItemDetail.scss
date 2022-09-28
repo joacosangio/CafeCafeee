@@ -10,15 +10,6 @@
     width: 100vw;
     height: 60vh;
 
-    // background-image: linear-gradient(
-    //     0deg,
-    //     rgba(0,0,0,0.5),
-    //     rgba(0,0,0,0.5)
-    // ),
-    // url("../../assets/img-prod/hero.webp");
-    // background-repeat: no-repeat;
-    // background-size: cover;
-
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -106,4 +97,27 @@
             transition: all ease-in-out;
             color: #26180C;
         }
+}
+
+
+@media (max-width: 768px) {
+    .detail-container {
+        flex-direction: column-reverse;
+        height: auto;
+        width: 100vw;
+    }
+
+    .btn-comprar {
+        width: 50vh;
+    }
+    .contador-container {
+        width: 40vw;
+        justify-content: space-around;
+    }
+
+    .details {
+        flex-direction: column;
+        align-items: center;
+        width: 80vw;
+    }
 }

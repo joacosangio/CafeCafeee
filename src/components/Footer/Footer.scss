@@ -7,7 +7,7 @@
 .footer-container {
     
     width: 100vw;
-    max-height: 30vh;
+    min-height: 30vh;
     margin-top: 5vh;
     border-radius: 100% 0% 100% 0% / 21% 100% 0% 79%  ;
     
@@ -70,4 +70,19 @@
     padding-left: 5px;
 
         
+}
+
+@media (max-width: 768px) {
+
+    .footer-container{
+
+        height: 40vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer-links {
+        width: 100%;
+    }
 }
