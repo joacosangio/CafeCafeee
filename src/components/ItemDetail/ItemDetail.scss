@@ -100,7 +100,7 @@
 }
 
 
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
     .detail-container {
         flex-direction: column-reverse;
         height: auto;
@@ -120,4 +120,32 @@
         align-items: center;
         width: 80vw;
     }
+}
+
+@media (min-width: 768px) and (max-width: 1500px) {
+    .detail-container {
+        width: 100vw;
+        height: auto;
+        margin-top: 2em;
+        flex-direction: column-reverse;
+    }
+
+    .contador-container {
+        width: 50vw;
+        justify-content: flex-start;
+        align-items: center;
+        
+    }
+    .btn-comprar {
+        width: 50vw;
+    }
+
+    .details {
+        margin-top: 2em;
+        width: 80%;
+        height: auto;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    
 }

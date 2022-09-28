@@ -86,3 +86,16 @@
         width: 100%;
     }
 }
+
+@media (min-width: 768px) and (max-width: 1500px) {
+
+    .footer-container{
+        height: auto;
+        flex-direction: column;
+    }
+
+    .footer-links {
+        width: 80%;
+        margin-bottom: 1em;
+    }
+}
